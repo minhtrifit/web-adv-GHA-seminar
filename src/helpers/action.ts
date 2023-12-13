@@ -11,5 +11,5 @@ export const multi = (a: number, b: number) => {
 };
 
 export const divide = (a: number, b: number) => {
-  return a * b;
+  return a / b;
 };
