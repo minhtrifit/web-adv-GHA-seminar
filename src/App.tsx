@@ -5,7 +5,7 @@ import Form from "react-bootstrap/Form";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { add, multi, sub } from "./helpers/action";
+import { add, multi, sub, divide } from "./helpers/action";
 
 const App = () => {
   const [firstValue, setFirstValue] = useState<string>("");
@@ -28,6 +28,10 @@ const App = () => {
 
         case "multi":
           setResult(multi(Number(firstValue), Number(secondValue)));
+          break;
+
+        case "divide":
+          setResult(divide(Number(firstValue), Number(secondValue)));
           break;
 
         default:
@@ -94,6 +98,7 @@ const App = () => {
             <option value="add">Add</option>
             <option value="sub">Subtract</option>
             <option value="multi">Multi</option>
+            <option value="divide">Devide</option>
           </Form.Select>
         </Form.Group>
 

@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { add, sub, multi } from "./action";
+import { add, sub, multi, divide } from "./action";
 
 test("Add action testing", () => {
   expect(add(1, 2)).toBe(3);
@@ -11,4 +11,8 @@ test("Subtract action testing", () => {
 
 test("Multi action testing", () => {
   expect(multi(6, 4)).toBe(24);
+});
+
+test("Divide action testing", () => {
+  expect(divide(10, 5)).toBe(2);
 });
